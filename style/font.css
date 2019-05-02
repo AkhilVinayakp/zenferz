@@ -1,1 +1,16 @@
 <!--includeing fonts downloaded-->
+@font-face
+{
+    font-family: "AlexBrush";
+    src: url("../fonts/AlexBrush.ttf");
+}
+@font-face
+{
+    font-family: "JoseItalic";
+    src: url("../fonts/JosefinSans-Italic.ttf");
+}
+@font-face
+{
+    font-family: "SourceSanPro";
+    src: url("../fonts/SourceSansPro-SemiBoldItalic.ttf");
+}
