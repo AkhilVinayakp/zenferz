@@ -1,0 +1,45 @@
+body
+{
+    background: url("../images/userbg2.jpg");
+}
+.zen-head
+{
+    margin-top: 0px;
+    width: auto;
+    height: 340px;
+    background: url("../images/userbg1.jpg") no-repeat, url("../images/logoJPG.JPG") no-repeat;
+    background-position: 0 0 , center;
+    background-blend-mode: multiply;
+
+
+
+}
+.zen-logo
+{
+   padding-top: 240px;
+    padding-left: 570px;
+    font-weight: bold;
+    font-size: 27px;
+    font-family: AlexBrush, serif;
+}
+.main
+{
+    padding: 30px 112px 12px 112px;
+}
+.intro
+{
+    height: 400px;
+    width: 550px;
+    color: #24110f;
+    border-radius: 6px;
+    border: 3px solid whitesmoke;
+    padding: 24px 24px;
+    font-size: 18px;
+    word-spacing: 12px;
+    line-height: 32px;
+    margin-right: 35px;
+    margin-bottom: 34px;
+    background: url("../images/userbg2.jpg");
+    background-size:600px 550px ;
+    box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+}
