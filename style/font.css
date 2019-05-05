@@ -14,3 +14,23 @@
     font-family: "SourceSanPro";
     src: url("../fonts/SourceSansPro-SemiBoldItalic.ttf");
 }
+@font-face {
+    font-family: "Anton";
+    src: url("../fonts/Anton-Regular.ttf");
+}
+@font-face {
+    font-family: "Coiny";
+    src: url("../fonts/Coiny-Regular.ttf");
+}
+@font-face {
+    font-family: "jose";
+    src: url("../fonts/JosefinSans-Italic.ttf");
+}
+@font-face {
+    font-family: "Lobster";
+    src: url("../fonts/Lobster-Regular.ttf");
+}
+@font-face {
+    font-family: "pacifico";
+    src: url("../fonts/Pacifico-Regular.ttf");
+}
