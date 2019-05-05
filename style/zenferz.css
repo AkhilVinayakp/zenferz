@@ -43,3 +43,80 @@ body
     background-size:600px 550px ;
     box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
 }
+.intro header
+{
+
+    font-size: 20px;
+    color: #2824f5;
+    font-style: italic;
+
+}
+.choose
+{
+    height: 400px;
+    width: 550px;
+
+    border-radius: 6px;
+    border: 3px solid whitesmoke;
+    padding: 24px 24px;
+    font-size: 18px;
+    line-height: 32px;
+    box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+}
+.mission
+{
+    padding: 70px 70px;
+    margin-left: 32px;
+    height:300px;
+    width:600px;
+    position: absolute;
+    top:600px;
+    left:350px;
+    border-radius: 9px;
+    background: url("../images/userbg2.jpg") no-repeat  ;
+    background-size: 600px 300px;
+    box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+    z-index: 1;
+
+    font-size: 20px;
+    font-family:JoseItalic, serif;
+    word-spacing: 9px;
+    line-height: 22px;
+    color: #2824f5;
+}
+.about , .contact
+{
+    height: 400px;
+    width: 550px;
+    border-radius: 9px;
+    box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+    z-index: 0;
+    padding: 24px 24px;
+}
+.contact
+{
+    margin-right: 35px;
+}
+.contact header , .about header
+{
+
+    padding-top:24px;
+    font-size: 24px;
+    font-family:JoseItalic ,sans-serif;
+    color:red;
+}
+.contact p ,.about p
+{
+    padding-top: 78px;
+    font-size: 20px;
+    font-family:JoseItalic ,sans-serif;
+    line-height: 20px;
+}
+.contact span
+{
+    margin-left:23px;
+}
+.about
+{
+    padding-top:65px !important;
+}
