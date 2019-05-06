@@ -21,3 +21,38 @@ a:hover
     background: transparent !important;
     color:#ffff00 !important;
 }
+.header h3
+{
+    font-family: 'AlexBrush';
+    font-size: 52px;
+    color: #ff3cd6;
+}
+.frm
+{
+    margin:0px !important;
+    background-image: url("../images/diamond.png");
+    border-radius: 12px;
+    box-shadow: 5px 10px #86888a;
+    height: 77vh; 
+    width: 99vh !important;
+   
+}
+.partial
+{
+    margin-top: 6px;
+}
+.subRes
+{
+    margin-top:16px;
+    margin-right: 43px;
+}
+input[type="submit"],input[type="reset"]
+{
+   margin-left: 5px;
+    
+}
+.error
+{
+    color: red;
+    margin-left: 16px;
+}
