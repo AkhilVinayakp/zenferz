@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Reg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- linking with the angular js files-->
+    <script src="lib/angular1.4.js"></script>
+    <script src="lib/angular-route1.4.js"></script>
+    <script src="app/app.js"></script>
 
+    <!--Linking with the bootstrap css-->
+    <link rel="stylesheet" href="style/reg.css">
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+
+    <title>Registration</title>
+</head>
+<body> <div class=" container ">
+    <div class="header">
+        <h3 class="pull-left">zenferz</h3>
+        <a href="zenferz.html#contact" class="btn btn-primary pull-right" role="button">Contact</a>
+        <a href="zenferz.html" class="btn btn-primary pull-right" role="button">Home</a>
+    </div><div class=" clearfix"></div>
+    <div class="pull-left btn-group">
+            <ul class="nav nav-pills">
+                   <!-- navigation tabs required -->
+                </ul>
+    </div>
+  <!--div adjustment required-->
+    <div ng-view  class="frm">
+        
+    </div>
+    </div>
+</body>
+</html>
