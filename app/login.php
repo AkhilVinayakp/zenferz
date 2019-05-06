@@ -1,0 +1,10 @@
+//print_r($_POST);
+$password=$_POST['password'];
+$email=$_POST['email'];
+$error="";
+$status="";
+$ser="localhost";
+$ur="root";
+$db="project";
+$ps="";
+$data=array();
