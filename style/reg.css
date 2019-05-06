@@ -1,0 +1,23 @@
+body
+{
+    background-image: url("../images/body-bg.jpg");
+    display: block;
+    margin-top:10px;
+}
+@font-face
+{
+    font-family: 'AlexBrush';
+    src: url("../fonts/AlexBrush.ttf");
+}
+.header a
+{
+    margin-left:4px;
+}
+a{
+    border: 0px !important;
+}
+a:hover 
+{
+    background: transparent !important;
+    color:#ffff00 !important;
+}
