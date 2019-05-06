@@ -1,0 +1,20 @@
+var reg=angular.module("Reg",["ngRoute"]);
+reg.config(function($routeProvider){
+    $routeProvider
+        .when("/student",{
+            templateUrl:"partials/student.html",
+            controller:"frmCtrl"
+        })
+        .when("/college",{
+            templateUrl:"partials/college.html",
+            controller:"frmCtrl"
+        })
+        .when("/organization",{
+            templateUrl:"partials/organization.html",
+            controller:"frmCtrl"
+        })
+        .when("/",
+        {
+            templateUrl:"partials/student.html"
+        });
+});
