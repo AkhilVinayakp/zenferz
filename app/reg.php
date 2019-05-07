@@ -9,7 +9,14 @@ require "database.php";
 $database=new database();
 $data=array();
 $status=0;
-//maxid() req
+//maxid() req :done
+function maxid()
+{
+    $database=new database();
+    $database->query("select MAX(uid) as uidm from usr_info");
+    $e=$database->resultset();
+    return ++$e[0]->uidm;
+}
 /* connection req:done*/
 $postdata=json_decode(file_get_contents("php://input"));
 if(empty($postdata->address))
@@ -35,8 +42,7 @@ catch (PDOException $e)
 {
     $status=0;
 }
-
-
-
-
+output=array("status" =>$status);
+echo json_encode($output);
+//final
 ?>
