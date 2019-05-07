@@ -1,1 +1,26 @@
-
+<div class="container-fluid bg">
+    <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="login">
+            <form name="login">
+                <h3 class="text-center header">LOGIN</h3>
+                <div class="form-group frm">
+                    <input placeholder="Enter your mail id" class="form-control" type="email" ng-model="email" name="email" required>
+                    <span class="error" ng-show="login.email.$invalid && login.email.$dirty">Email is invalid</span>
+                </div>
+                <div class="form-group frm">
+                    <input type="password" placeholder="password" class="form-control" name="password" ng-model="password" minlength="5" maxlength="10" required>
+                    <span  class="error" ng-show="login.password.$dirty && login.password.$invalid">Password is invalid</span>
+                </div>
+                <div id="forgot" class="pull-right" >forgot <a href="#/for_pass.html">password</a></div>
+                <button class="btn btn-success btn-block" ng-click="signin()">Login</button>
+            </form>
+            <div class="text-center " style="margin-top: 12px">Don't have any account
+                <div class="text-center"> <button class="btn-success" ng-click="signup()"> sign up now</button> </div>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+    </div>
+</div>
