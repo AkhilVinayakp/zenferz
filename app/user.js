@@ -47,3 +47,23 @@ user.controller("logCtrl",function ($scope,$http) {
 
 
 });
+var usr=angular.module("main",['ngRoute']);
+//config
+usr.config(function ($routeProvider) {
+    $routeProvider.when("/",{
+        templateUrl:"partials/views/home.html"
+    })
+        .when("/",
+            {
+                templateUrl:"partials/views/home.html",
+                controller:"homeCtrl"
+            })
+        .when("/home",{
+            templateUrl:"partials/views/home.html",
+            controller:"homeCtrl"
+        })
+        .when("/dashboard",{
+            templateUrl:"partials/views/dash.html",
+            controller:"dashCtrl"
+        })
+   //additional routing req
