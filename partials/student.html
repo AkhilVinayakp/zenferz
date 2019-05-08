@@ -1,1 +1,45 @@
-<h3> student template </h3>
+<div>
+        <form name="reg" method="POST">
+            <table class="partial" cellspacing="9px">
+                <tr>
+                    <td>
+                    <input type="text"  placeholder="Your name"  name="sname" ng-model="my_name" minlength="4" required>
+                    <span class="error" ng-show="reg.sname.$touched && reg.sname.$invalid">The name is invalid</span>
+                    </td>
+                </tr>
+                <tr>
+                        <td>
+                        <input type="email" placeholder="Email Id" name="email" ng-model="email" required>
+                        <span class="error" ng-show="reg.email.$touched && reg.email.$invalid">The email is invalid</span>
+                        </td>
+                    </tr>
+                <tr>
+                    <td>
+                    <input type="text" placeholder="Institute Id" name="i_id" ng-model="i_id" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <input type="text" placeholder="Register Number" name="reg_no" ng-model="reg_no" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <input type="Password" placeholder="Password" name="password" ng-model="password" minlength="5" maxlength="10" required >
+                    <span class="error" ng-show="reg.password.$touched && reg.password.$invalid">The password is invalid</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <input type="password" placeholder="Confirm Password" name="cnf_password" ng-model="cnf_password" required>
+                    <span class="error" ng-show="reg.cnf_password.$dirty && err_pass()">password mismatch</span>
+                    </td>
+                </tr>
+                <input type="hidden" ng-init="type=1">
+            </table>
+            <div class="subRes pull-right">
+            <button  ng-disabled="reg.$invalid"    ng-click="frmSub()"  class="btn btn-primary">Register</button>
+            <input type="reset" class="btn btn-primary" value="reset">
+            </div>
+        </form>
+</div>
