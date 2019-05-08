@@ -16,6 +16,42 @@
     <link rel="stylesheet" type="text/css" href="lib/animate.css">
 </head>
 <body>
-<!-- to be included -->
+<!-- to be included :done -->
+    <div class="mainWrapper" ng-controller="mainCtrl">
+            <div class="sidenav text-center">
+                <div class="userinfo">
+                    <div class="text-center ">
+                    <img src="images/profile.png">
+                       {{user.name}}</div>
+                </div>
+
+                <a href="#/home">Home</a>
+                <a href="#/dashboard" ng-show="dash_Show">Dashboard</a>
+                <a href="#/evar" ng-show="dash_Show">Event/Article Post</a>
+                <a href="#/users" ng-show="dash_Show">Users</a>
+                <a href="#/editprofile">Edit profile</a>
+                <div>
+                <a href="#/create">create/edit Article</a>
+                <a href="#/events" ng-show="Event_cre_show">create Event</a>
+             <!--   <a href="#/myevents">My Events</a> -->
+                <a href="#/forums" ng-show="frcom">Forums</a>
+                <a href="#/compiler" ng-show="frcom">compiler</a>
+                </div>
+
+                <button class="btn btn-danger" ng-click="logout()">sign out</button>
+            </div>
+            <div class="content">
+                <nav class="nav">
+                    <a href="zenferz.html#contact" target="_blank" class="btn btn-success pull-right">contact</a>
+                    <a href="zenferz.html#about" target="_blank" class="btn btn-success pull-right">about</a>
+                </nav>
+                    <article>
+                       <div ng-view></div>
+
+                    </article>
+
+
+            </div>
+        </div>
 </body>
 </html>
