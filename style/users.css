@@ -1,1 +1,31 @@
 <!-- main styling css page for users.html file -->
+<!-- side navigation styling -->
+.sidenav
+{
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    left: 0px;
+    overflow-x: hidden;
+    font-family: "jose", serif;
+    background:linear-gradient(-45deg,#ee7752,#e73c7e,#23a6d5,#23d5ab);
+    background-size: 400% 400% ;
+    
+}
+<!-- side nav background styling required -->
+.sidenav a{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    color: #ebe1f5;
+    margin-top:15px;
+
+}
+.sidenav a:hover
+{
+    color: #ff36f9;
+    background-color: #f5f5f5;
+}
