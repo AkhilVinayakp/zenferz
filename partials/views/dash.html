@@ -1,5 +1,20 @@
 <div class="container-fluid">
     <header class="well">Dashboard</header>
+ <table class="table dash">
+            <tr>
+             <th>name<th><th>type<th><th>reg_id<th><th>ins_id<th><th>email</th><th>address</th>
+            </tr>
+            <tr ng-repeat="user in x">
+                <td>{{user.uname}}</td>
+                <td>{{user.u_type}}</td>
+                <td>{{user.reg_id}}</td>
+                <td>{{user.insid}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.address}}</td>
+                <td><button class="btn btn-sm btn-success"  ng-click="accept(user.email,user.uid)">Accept <i class="fas fa-user"></i> </button> </td>
+                <td><button class="btn btn-sm btn-danger" ng-click="refuce(user.email)">delete <i class="fas fa-trash-alt"></i> </button> </td>
+            </tr>
+        </table>
 
     <div class="well-lg">Account requests</div>
 </div>
