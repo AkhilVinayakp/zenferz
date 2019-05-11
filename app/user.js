@@ -67,3 +67,41 @@ usr.config(function ($routeProvider) {
             controller:"dashCtrl"
         })
    //additional routing req
+   });
+   usr.controller("mainCtrl",function ($scope,$http) {
+        $scope.user={};
+        var id=sessionStorage.getItem('uid');
+        console.log(sessionStorage.getItem('uid'));
+        if(id===null)
+        {
+            alert("you are not logged in so please log in");
+            window.location="login.html";
+        }
+        else
+        {
+            $scope.user.name=sessionStorage.getItem('name');
+            let type=sessionStorage.getItem('type');
+            console.log(type);
+           //permission of tabs for activating and deactivating !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!required!!!!!!!!!!!!!!!!
+        }
+       $scope.logout=function () {
+                    var date=new Date();
+                    var lastseen=""+date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+"@"+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+          $http(
+              {
+                  url: "app/logout.php",
+                  method: "post",
+                  headers: {
+                      'Content-type':'application/x-www-form-urlencoded'
+                  },
+                  data:"lastseen="+lastseen+"&id="+id
+              }
+          ).then(function (response) {
+              console.log(response.data);
+          });
+
+            sessionStorage.clear();
+            window.location="zenferz.html";
+
+        }
+});
