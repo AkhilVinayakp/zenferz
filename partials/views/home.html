@@ -1,4 +1,38 @@
 <!-- partail template containg list view of  all articles and event informations -->
 <div class="container-fluid bg nir-cc">
-    <header class="well nir-hom-search">home<input ng-model="searchAE" class="pull-right" type="text" placeholder="search             here...">
+    <header class="well nir-hom-search">home<input ng-model="searchAE" class="pull-right" type="text" placeholder="search here...">
     </header>
+<div class="row" ng-repeat="x in ear | filter:{ name :searchAE } track by $index">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8" >
+                <div class="header">
+                    <div class="name" style="background: url({{x.url}}); object-fit: scale-down">
+                        <header>{{x.type}}</header>
+                        <div class="center-block">
+                                <h4 class="text-center">{{x.name | uppercase}}</h4>
+                        </div>
+                    </div>
+                            <div class="desc">
+                                <div  ng-show="kind(x.type)">
+                                    <div> Date :{{x.fn_date}}</div>
+                                    <div> venue:{{x.venue}}</div>
+                                </div>
+                                <div class="intro">
+                                    <header>Introduction</header><p> {{x.intro}}</p>
+                                    <button ng-click="red(x.EARid)" class=" btn btn-sm">read more</button>
+
+                                </div>
+                                    <div class="tools">
+                                        <div class="btn-group">
+                                            <button  ng-click="likeit(x.EARid,x)" ng-style="isliked(x.EARid,x)" class="btn btn-success" ng-disabled="islikedit(x.EARid,x)">like {{x.rating}}</button>
+                                            <button  ng-click="load_comment(x.EARid)" class="btn btn-info">comment</button>
+                                        </div>
+                                    </div>
+                            </div>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+
+        </div>
+
+</div>
