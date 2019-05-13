@@ -105,3 +105,42 @@ usr.config(function ($routeProvider) {
 
         }
 });
+   usr.controller("homeCtrl",function ($scope,$http,$location) {
+   var id=sessionStorage.getItem('uid');
+    var ob,l;//array of liked ear by the user and it's length,like controlle for likeitfn
+   // $scope.ear={};
+
+    $http(
+        {
+            url:"app/earload.php",
+            method: "POST",
+            headers:
+                {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                data:{
+                    uid:id,
+                    fn:"normal"
+                }
+        }
+    ).then(function (response) {
+        console.log(response.data);
+        $scope.ear=response.data.output;
+
+        //managing likes
+        try{
+         l=response.data.liked.length;}
+         catch (e) {
+             
+         }
+         if(l>0) {
+             ob = response.data.liked;
+         }
+
+         console.log(ob);
+
+
+    });
+   
+   
+  });
