@@ -65,3 +65,46 @@
     color: #ff36f9;
     background-color: #f5f5f5;
 }
+.userinfo
+{
+    height:125px;
+    background-color: gray;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+    color: white;
+    font-family: SourceSanPro sans-serif;
+    font-size: 20px;
+}
+
+.userinfo img{
+
+    width:75px;
+    height: 75px;
+    display: block;
+    margin: auto;
+
+}
+
+
+
+/* css for main content*/
+.nav
+{
+    height: 62px;
+    background:url("../images/logoJPG.JPG") no-repeat,gray  ;
+    background-blend-mode: color;
+    background-size: 146px auto;
+    padding: 10px 10px 10px 10px;
+}
+
+
+.nav a{
+    margin-left: 12px;
+    background-color: mediumvioletred;
+}
+article
+{
+    margin-top: 12px;
+}
+
