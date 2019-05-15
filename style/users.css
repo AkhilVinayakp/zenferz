@@ -161,3 +161,32 @@ article
 
 
 }
+.name h4
+{
+    font-family: Lobster, serif;
+    font-size: 200%;
+    color: whitesmoke;
+    
+}
+ .header .name header
+{
+
+    color: #f5f5f5 !important;
+     font-family: "pacifico", serif;
+}
+/* description styling
+
+ */
+ .header .desc
+{
+    padding: 13px 13px 13px 13px;
+     font-weight: bolder;
+     color: #000000;
+     font-family: "jose", serif;
+}
+ .tools
+ {
+     position: relative;
+    margin-top: 23px;
+
+ }
