@@ -141,6 +141,23 @@ usr.config(function ($routeProvider) {
 
 
     });
+      $scope.isliked=function(earid,x)//change the color if it id liked
+    {
+        //console.log(earid);
+        var css={"color":"red"};
+        earid=parseInt(earid);
+        for(var i=0;i<l;i++)
+        {
+            if(earid==ob[i])
+            {
+
+                return css;
+            }
+
+
+        }
+        if (x.li === true) return css;
+    };
    
    
   });
