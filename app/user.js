@@ -158,6 +158,50 @@ usr.config(function ($routeProvider) {
         }
         if (x.li === true) return css;
     };
-   
+    $scope.likeit=function(earid,x)
+    {
+
+        // console.log(colo);
+           x.rating++;
+           $http({
+               url:"app/earload.php",
+               method: "POST",
+               headers:
+                   {
+                       'Content-Type': 'application/x-www-form-urlencoded'
+                   },
+               data:{
+                   fn:"like",
+                   input:earid,
+                   input1:id
+               }
+           }).then(function (response) {
+               console.log(response.data);
+               if(response.data.output==="ok")
+               {
+                   x.li=true;
+                   $scope.isliked(earid,x);
+                   $scope.islikedit(earid,x);
+               }
+
+           })
+    };
+
+
+    $scope.kind=function(kind)
+    {
+        if(kind=="event")
+            return true;
+
+    };
+    $scope.red=function (x) {
+
+        $location.path("/single");
+        sessionStorage.setItem('ob',x);
+    };
+    $scope.load_comment=function (x) {
+        $location.path("/single");
+        sessionStorage.setItem('ob',x)
+    }
    
   });
