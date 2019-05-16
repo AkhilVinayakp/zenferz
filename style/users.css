@@ -166,8 +166,33 @@ article
     font-family: Lobster, serif;
     font-size: 200%;
     color: whitesmoke;
-    
+    box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+    animation: color_ch 100s infinite;
 }
+@keyframes color_ch {
+    0%{ color:#000000}
+    10%{ color: #ff8d04
+    }
+    20%{ color: #4cff1e
+    }
+    30%{ color: #3b46ff
+    }
+    40%{ color: #13ffee
+    }
+    50%{ color: #ff3612
+    }
+    60%{ color: #fff113
+    }
+    70%{ color: #d325ff
+    }
+    80%{ color: #e8ff74
+    }
+    90%{ color: #ffdab7
+    }
+    100%{ color:#000000}
+
+}
+
  .header .name header
 {
 
