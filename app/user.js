@@ -205,3 +205,31 @@ usr.config(function ($routeProvider) {
     }
    
   });
+usr.controller("singleCtrl",function ($scope,$http,$location,$log) {
+    $scope.x={};
+    $scope.x.li=false;
+    var ob,l;//ob array containing liked videos and l it's length
+    let  earid=sessionStorage.getItem('ob');// is the EARid
+    if(earid==null) {
+        alert("permission denided");
+        $location.path("/home");
+    }
+    else {
+        console.log(earid);
+        $http({
+            url: "app/earload.php",
+            method: "POST",
+            headers:
+                {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+            data: {
+                earid: earid,
+                subfn: "load",
+                fn: "single"
+            }
+        }).then(function (response) {
+              $scope.x=response.data.output;
+            console.log(response.data.output);
+
+        });
