@@ -233,3 +233,24 @@ usr.controller("singleCtrl",function ($scope,$http,$location,$log) {
             console.log(response.data.output);
 
         });
+           //loading the liked
+
+        $http({
+            url:"app/earload.php",
+            method: "POST",
+            headers:
+                {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+            data:{
+                earid:earid,
+                subfn:"loadlk",
+                fn:"single",
+                uid:sessionStorage.getItem('uid')
+            }
+        }).then(function (response) {
+           // console.log(response.data);
+            l=response.data.liked.length;
+            ob=response.data.liked;
+
+        });
