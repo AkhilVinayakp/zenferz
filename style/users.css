@@ -247,3 +247,24 @@ article
     height: 35vh;
     box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
 }
+.edit input[type="password"]
+{
+
+    margin-top:19px;
+    margin-left: 16px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #b6b6b6;
+    padding-left: 12px;
+    padding-right: 12px;
+
+}
+.edit input[type="password"]:focus
+{
+    box-shadow: 0 0 12px rgba(81,203,238, 1);
+}
+.intro
+{
+    line-height: 32px;
+    color: #24110f;
+}
