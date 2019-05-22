@@ -64,6 +64,34 @@ else if($postdata->fn=="like")
             $data="failed outer";
 
 }
+else if ($postdata->fn=="single")
+{
+    if($postdata->subfn=="load") {
+        $database->query("select * from event where EARid=:id");
+        $database->bind(":id", $postdata->earid);
+        $result = $database->resultset();
+        $data = $result[0];
+    }
+    if($postdata->subfn=="loadlk")
+    {
+        $database->query('select liked from user where uid=:uid');
+        $database->bind(':uid', $postdata->uid);
+        $liked = $database->resultset();
+        if ($liked) {
+            $uid = $liked[0]->liked;
+            $n = strlen($uid);
+            $i = 0;
+            while ($i < $n) {
+                $like[] = (int)substr($uid, $i, 3);
+                $i = $i + 4;
+            }
+        } else
+            $like = null;
+    }
+
+
+
+}
 
 
 $output=array(
