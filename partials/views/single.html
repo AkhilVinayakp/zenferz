@@ -1,1 +1,58 @@
-<h2> single view template for event / article </h2>
+<div class="container-fluid bg">
+
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10" >
+            <div class="header wd">
+                <div class="name" style="background: url({{x.url}});">
+                    <header>{{x.type}}</header>
+                    <div class="center-block">
+                        <h4 class="text-center">{{x.name}}</h4>
+                    </div>
+                </div>
+                <button  ng-click="likeit()" ng-style="isliked()" class="btn btn-success pull-right" ng-disabled="islikedit()">like {{x.rating}}</button>
+                <div class="desc">
+                    <div  ng-show="kind(x.type)">
+                        <div> Date :{{x.fn_date}}</div>
+                        <div> venue:{{x.venue}}</div>
+                    </div><br><br>
+                    <div class="intro">
+                        <p> {{x.intro}}</p>
+
+                        <div>{{x.content}}</div>
+                    </div>
+
+
+                    <div class="comments"> <h4> Leave a Replay</h4><br><!-- edit the following 25/01/2019 -->
+                        <form name="comm">
+                        <textarea name="comment" class="form-control" rows="3" placeholder="Your Comment" ng-model="comment" required></textarea>
+                        <br/>
+                        <button ng-disabled="comm.$invalid" class="btn btn-success btn-md pull-right" ng-click="commentit()">Comment</button>
+                        <br/>
+                        </form>
+                        <hr/>
+                        <h4>Comments</h4>
+                        <ul class="list-group">
+                            <span ng-show="comShow()">no comments</span>
+                            <li class="list-group-item" ng-repeat="cmt in comments">
+                                <span class="text-left">{{cmt.comment}}</span>
+                                <span class="pull-right"> by {{cmt.bywhom}}</span>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+
+    </div>
+
+
+
+</div>
+
+
