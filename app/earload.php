@@ -34,6 +34,36 @@ if($postdata->fn=="normal") {
     } else
         $like = 0;
 }
+//updating the like operations
+else if($postdata->fn=="like")
+{
+    $database->query("select rating from event where EARid=:id");
+    $database->bind(":id",$postdata->input);
+    $out=$database->resultset();
+    $likes=$out[0]->rating;
+
+        $likes = $likes + 1;
+        $database->query("update event set rating =:l where EARid=:id");
+        $database->bind(":l",$likes);
+        $database->bind(":id",$postdata->input);
+        if($database->execute()) {
+            $database->query("select liked from user where uid=:id");
+            $database->bind(":id", $postdata->input1);
+            $out = $database->resultset();
+            $row = $out[0]->liked;
+            $row = $row . "" . $postdata->input . "" . "-";
+            $database->query("update user set liked=:l where uid=:id");
+            $database->bind(":l", $row);
+            $database->bind(":id", $postdata->input1);
+            if($database->execute())
+                $data="ok";
+            else
+                $data="failed inner";
+        }
+        else
+            $data="failed outer";
+
+}
 
 
 $output=array(
