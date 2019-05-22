@@ -215,3 +215,35 @@ article
     margin-top: 23px;
 
  }
+
+/* single.html styling
+
+........................
+ */
+.comments
+{
+    margin-top: 22px;
+
+}
+.comments h4
+{
+    color:white;
+}
+.comments textarea
+{
+    border: #2a6496 2px ;
+
+}
+.subRes
+{
+    margin-top:16px;
+    margin-right: 43px;
+}
+.edit
+{
+    margin-top: 15vh;
+    margin-bottom: 22vh;
+    width: 65vh;
+    height: 35vh;
+    box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+}
