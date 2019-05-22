@@ -254,3 +254,60 @@ usr.controller("singleCtrl",function ($scope,$http,$location,$log) {
             ob=response.data.liked;
 
         });
+        $scope.isliked=function()//change the color if it id liked
+        {
+            //console.log(earid);
+            var css={"color":"red"};
+            earid=parseInt(earid);
+            for(var i=0;i<l;i++)
+            {
+                if(earid==ob[i])
+                {
+
+                    return css;
+                }
+
+
+            }
+            if ($scope.x.li === true) return css;
+        };
+        $scope.islikedit=function()//enable and disable the like button
+        {
+            earid=parseInt(earid);
+            for(var i=0;i<l;i++)
+            {
+                if(earid==ob[i])
+                {
+                    return true;
+                }
+            }
+            if($scope.x.li===true) return true;
+        };
+        $scope.likeit=function()
+        {
+
+            // console.log(colo);
+            $scope.x.rating++;
+            $http({
+                url:"app/earload.php",
+                method: "POST",
+                headers:
+                    {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                data:{
+                    fn:"like",
+                    input:earid,
+                    input1:sessionStorage.getItem('uid')
+                }
+            }).then(function (response) {
+                console.log(response.data);
+                if(response.data.output==="ok")
+                {
+                  $scope.x.li=true;
+
+                }
+
+            })
+        };
+      
