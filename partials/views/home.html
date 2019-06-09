@@ -1,8 +1,6 @@
-<!-- partail template containg list view of  all articles and event informations -->
 <div class="container-fluid bg nir-cc">
-    <header class="well nir-hom-search">home<input ng-model="searchAE" class="pull-right" type="text" placeholder="search here...">
-    </header>
-<div class="row" ng-repeat="x in ear | filter:{ name :searchAE } track by $index">
+    <header class="well nir-hom-search">home<input ng-model="searchAE" class="pull-right" type="text" placeholder="search here..."> </header>
+        <div class="row" ng-repeat="x in ear | filter:{ name :searchAE } track by $index">
             <div class="col-lg-2"></div>
             <div class="col-lg-8" >
                 <div class="header">
@@ -29,10 +27,17 @@
                                         </div>
                                     </div>
                             </div>
+
+
+
                 </div>
             </div>
             <div class="col-lg-2"></div>
 
         </div>
 
+
+
 </div>
+
+

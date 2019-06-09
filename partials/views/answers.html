@@ -1,0 +1,38 @@
+<div class="container-fluid">
+<div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+        <div class="reply" ng-show="showRep" >
+            <header class="nir-fr-quesL "><h4>Question</h4><p>{{qu.quest}}</p>
+                <button class=" btn btn-primary pull-right" ng-click="put_answ()">post your answer</button>
+                <footer class="text-left badge">{{qu.date}}</footer>
+                <footer class="text-right badge">{{qu.uname}}</footer>
+                <footer class="text-right badge">{{qu.email}}</footer>
+            </header> <div class="nir-fr-repl">
+            <header class="thumbnail "><h5>Answers  </h5></header>
+            <div  ng-repeat="r in rep">
+                <div>
+                    <article>
+                        <p>{{r.reply}}</p>
+                        <footer class="text-right badge">{{r.uname}}</footer>
+                        <footer class="text-right badge">{{r.email}}</footer>
+                        <footer class="text-right badge">{{r.r_date}}</footer>
+                    </article>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="nir-fr-put_answ" ng-hide="showRep">
+            <form class="form-group-sm " role="form">
+
+                <textarea cols="4" ng-model="qu_ans"   placeholder="Enter your Answer:" minlength="1" maxlength="1000" required></textarea>
+
+                <button type="submit" ng-click="push_ans()" class="btn btn-success pull-right">Post</button>
+            </form>
+        </div>
+        </div>
+        <div class="col-lg-2"></div>
+
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <header class="well"><h4 class="text-center">Articles</h4></header>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-12">
+
+                <div ng-show="edit" class="nir-cra-edit">
+                    <table class="table table-striped">
+                        <span ng-show="arShow">no articles yet</span>
+                        <tr class="nir-cra-list" ng-repeat="ar in articles">
+                            <td class="text-left nir-cra-name">{{ar.name}}</td>
+                            <td class="nir-cra-date">{{ar.pub_date}}</td>
+                            <td class="pull-right"><button ng-click="editAr(ar)" class="btn btn-primary">Edit <i class="fas fa-pencil-alt"></i> </button>
+                            <button class="btn btn-danger" ng-click="delete(ar.EARid)">delete <i class="fas fa-trash-alt"></i> </button>
+                            </td>
+                        </tr>
+                     </table>
+                    <button class="btn btn-primary nir-btn nir-btn" ng-click="createnew()"> create a new article </button>
+                </div>
+            <div ng-show="create" class="nir-cra" > <header class="text-center well-sm" >create article</header>
+                <form role="form" name="cre_ar">
+                    <div class="form-group">
+                        <label for="a_name">Article Name:</label>
+                        <input type="text" class="form-control" style="width: 298px;" id="a_name" ng-model="a_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="intro">introduction</label>
+                        <textarea id="intro" ng-model="intro" class="form-control" cols="7" style="width: 670px; height: 150px;" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="con">content:</label>
+                        <textarea id="con" ng-model="content" cols="9" class="form-control" style="width: 670px; height: 450px;" required></textarea>
+                    </div>
+
+                    <button ng-disabled="cre_ar.$invalid" ng-show="submitshow" ng-click="submit()" type="submit" class="btn btn-primary nir-btn">Submit</button>
+                    <button ng-disabled="cre_ar.$invalid" ng-show="updateshow" ng-click="update()" type="submit" class="btn btn-success nir-btn">update</button>
+                </form>
+
+
+
+            </div>
+
+
+
+        </div>
+        <div class="col-lg-1"></div>
+
+    </div>
+
+</div>

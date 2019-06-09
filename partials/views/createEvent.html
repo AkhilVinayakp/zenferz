@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10">
+            <div  class="nir-eve" > <header class="text-center well-sm" ><h3 class="animated jackInTheBox ">Create Event</h3></header>
+                <form role="form" name="cre_ar">
+                    <div class="form-group">
+                        <label class="animated zoomInUp" for="a_name">Event Name:</label>
+                        <input type="text" class="form-control" style="width: 298px;" id="a_name" ng-model="e_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="animated zoomInUp" for="venue">Venue:</label>
+                        <input type="text" class="form-control" style="width: 298px;" id="venue" ng-model="venue" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="animated zoomInUp" for="fn_date">Function Date:</label>
+                        <input type="date" class="form-control" style="width: 298px;" id="fn_date" ng-model="fn_date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="animated zoomInUp" for="intro">introduction:</label>
+                        <textarea id="intro" ng-model="intro" class="form-control" cols="7" style="width: 670px; height: 150px;" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="animated zoomInUp" for="con">details:</label>
+                        <textarea id="con" ng-model="content" cols="9" class="form-control" style="width: 670px; height: 450px;" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="animated zoomInUp" for="file">upload file</label>
+                        <input type="file" accept="image/*" class="btn btn-success" style="width: 270px;" id="file"  ng-file="uploadfiles" required>
+                    </div>
+
+                    <button  ng-disabled="cre_ar.$invalid" ng-click="submit()" type="submit" class="btn btn-primary nir-btn">Submit</button>
+
+                </form>
+
+
+
+            </div>
+
+
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+</div>

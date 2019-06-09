@@ -1,0 +1,54 @@
+<!--Event and article post waiting for the admin approval-->
+<!-- articles and Events list view provide the button to  view in full screen-->
+<div class="container-fluid nir-evar">
+    <div ng-show="list_of_evar">
+        <div>
+            <header class="nir-evar-header">Event/Aritcle Lists</header>
+            <footer ng-show="request" class="nir-evar-footer text-center">No Requests yet</footer>
+            <table class="table table-hover">
+                <tr>
+                    <th>Event/Article Name</th>
+                    <th>Publisher Name</th>
+                    <th>Date</th>
+                </tr>
+                <tr class="nir-cra-list" ng-repeat="ar in ev">
+                    <td class="text-left ">{{ar.name}}</td>
+                    <td class="text-left ">{{ar.uname}}</td>
+                    <td >{{ar.pub_date}}</td>
+                    <td class="pull-right"><button ng-click="viewEA(ar.EARid)" class="btn btn-primary">View <i class="fas fa-pencil-alt"></i> </button>
+                        <button class="btn btn-danger" ng-click="rej(ar.EARid)">delete <i class="fas fa-trash-alt"></i> </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div ng-hide="list_of_evar">
+        <div class="col-lg-10" >
+            <div class="header wd">
+                <div class="name" style="background: url({{x.url}});">
+                    <header>{{x.type}}</header>
+                    <div class="center-block">
+                        <h4 class="text-center">{{x.name}}</h4>
+                    </div>
+                    <button class="btn btn-success pull-right" ng-click="acc(x.EARid)">ACCEPT</button>
+                    <button class="btn btn-warning pull-right" ng-click="rej(x.EARid)">REJECT</button>
+                </div>
+                <div class="desc">
+                    <div  ng-show="kind(x.type)">
+                        <div> Date :{{x.fn_date}}</div>
+                        <div> venue:{{x.venue}}</div>
+                    </div>
+                   <br><br>
+                    <div class="intro">
+                        <p> {{x.intro}}</p>
+
+                        <div>{{x.content}}</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

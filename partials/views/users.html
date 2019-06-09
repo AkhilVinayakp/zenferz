@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="nir-user-lt">
+        <header>users</header>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>type</th>
+                    <th>email</th>
+                    <th>regiser id</th>
+                    <th>lastseen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="x in u">
+                    <td>{{x.uname}}</td>
+                    <td>{{x.u_type}}</td>
+                    <td>{{x.email}}</td>
+                    <td>{{x.reg_id}}</td>
+                    <td>{{x.last_seen}}</td>
+                    <td><button class="btn btn-danger" ng-click="user_del(x.email)">delete  <i class="fas fa-trash"></i> </button> </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+
+</div>

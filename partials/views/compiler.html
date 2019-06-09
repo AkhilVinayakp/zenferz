@@ -1,0 +1,25 @@
+<div class="compiler">
+    <form class="form-group-sm" role="form">
+        <label for="select_ln">choose language</label><button class="btn btn-primary pull-right" ng-click="code_run()">Run</button>
+        <select class="form-control" id="select_ln" ng-model="ln" ng-change="load()" style="width: 200px">
+            <option ng-repeat="x in names" value="{{x}}" style="width: 200px">
+                {{x}}
+            </option>
+        </select>
+    </form>
+    <div id="editor" style=" position: absolute;
+            top:170px;
+            left: 204px;
+            bottom: 5px;
+            right: 450px;
+            border: 3px solid red;
+            ">
+
+
+    </div>
+    <div style="  background-color:white ;position: absolute; top:170px; left:920px ;bottom: 5px; right: 1px; border: 1px solid green ;padding:3px 3px 3px 3px">
+        <label for="txt">Output</label>
+        <textarea ng-model="output" id="txt" cols="5" style="width: 440px ;height:440px;resize: none" readonly></textarea>
+    </div>
+
+</div>
