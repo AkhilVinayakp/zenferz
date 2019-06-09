@@ -1,0 +1,41 @@
+body
+{
+    background-image: url("../images/twood.png");
+   
+}
+@font-face
+{
+    font-family: 'AlexBrush';
+    src: url("../fonts/AlexBrush.ttf");
+}
+
+#navigation
+{
+    float:right;
+}
+#navigation a:hover
+{
+    background-color: #fff;
+    color: rgb(31, 17, 228);
+}
+#log_cre
+{
+    margin-top: 5%;
+}
+footer
+{
+    margin-top:5%;
+}
+#jumbo div
+{
+    font-size: 250%;
+    font-weight: bolder;
+}
+#jumbo
+{
+      
+      background-color: rgba(240, 168, 168, 0.582);
+      font-family: 'AlexBrush';
+     font-size: 130%;
+    color: #ffffff;
+}

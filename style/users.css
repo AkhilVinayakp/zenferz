@@ -1,5 +1,16 @@
-<!-- main styling css page for users.html file -->
-<!-- side navigation styling -->
+/*
+general styling
+
+ */
+.nir-btn
+{
+    background-color: #2a6496 !important;
+}
+.nir-btn-sh
+{
+    box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+
+}
 .sidenav
 {
     height: 100%;
@@ -15,7 +26,6 @@
     -webkit-animation: Gradient 15s ease infinite;
     -moz-animation:Gradient 15s ease infinite ;
     animation: Gradient 15s ease infinite;
-    
 }
 @-webkit-keyframes Gradient {
     0%{
@@ -50,7 +60,6 @@
         background-position: 0% 50%;
     }
 }
-<!-- side nav background styling required -->
 .sidenav a{
     padding: 6px 8px 6px 16px;
     text-decoration: none;
@@ -65,6 +74,7 @@
     color: #ff36f9;
     background-color: #f5f5f5;
 }
+
 .userinfo
 {
     height:125px;
@@ -107,6 +117,37 @@ article
 {
     margin-top: 12px;
 }
+
+
+
+
+
+/* main content area*/
+
+
+
+
+
+
+
+.content
+{
+    background: url("../images/userbg2.jpg") repeat;
+    margin-left: 200px;
+    padding: 0px 0px;
+
+}
+article
+{
+    padding: 14px 14px 14px 14px;
+
+
+
+}
+
+
+
+
 /* home.html styling   */
 .nir-hom-search input{
     margin-right:12px ;
@@ -216,6 +257,7 @@ article
 
  }
 
+
 /* single.html styling
 
 ........................
@@ -267,4 +309,190 @@ article
 {
     line-height: 32px;
     color: #24110f;
+}
+/* create_u styling
+ styling the create article section the class starts with nir and cra
+ */
+.nir-cra,.nir-eve
+{
+    border-radius: 10px;
+    box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+    padding:9px 9px 9px 12px;
+    width: 700px;
+    margin-left: 15%;
+}
+.nir-cra-edit
+{
+    margin-bottom: 345px;
+    margin-left: 0;
+}
+.nir-cra-list
+{
+    width: auto;
+    margin-top: 7px;
+    background-color: white;
+    padding: 9px 0 2px 15px;
+}
+.nir-cra-edit table tr:nth-child(even){background-color: #f2f2f2}
+.nir-cra-name
+{
+    font-family: "Bodoni MT Black", serif;
+    color: #ff8392;
+    font-size: medium;
+    margin-right: 234px;
+}
+.nir-cra-date
+{
+    font-size: larger;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #162bff;
+}
+
+/*forum styling
+ */
+.nir-fr
+{
+    padding: 16px 16px;
+    margin-bottom: 270px;
+}
+.nir-fr header
+{
+    font-weight: bold;
+    font-size: 19px;
+    color:#2a6496;
+}
+.nir-fr hr
+{
+    border-color: blue;
+}
+.nir-fr-cre_tp_fr{
+    /* create new topic form styling*/
+    box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+    margin-top: 150px;
+    margin-bottom: 220px;
+    padding: 22px 22px ;
+    border-radius: 9px;
+    height: 100px;
+    width: auto;
+
+}
+.nir-fr-cre_tp_fr button
+{
+    margin-top: 6px;
+    margin-left: 9px;
+}
+/* forum questions styling
+
+ */
+.nir-fr-ques {
+    margin-bottom: 420px;
+}
+.nir-fr-ques .thumbnail
+{
+    height:47px !important;;
+}
+
+.nir-fr-ques input[type='text']
+{
+    width:184px;
+}
+
+.nir-fr-ques td
+{
+   line-height: 39px !important;
+    padding: 3px 3px 3px 3px;
+    background-color: whitesmoke;
+}
+.nir-fr-ques table
+{
+    border-collapse: separate;
+}
+.nir-fr-ques table tr{
+
+    margin-bottom: 4px;
+    border-spacing: 5px 1rem;
+}
+.nir-fr-quesL
+{
+    background-color: whitesmoke;
+    padding: 14px 14px 14px 14px;
+    border-radius: 9px;
+    width: auto;
+    margin-bottom: 14px;
+    left:200px;
+    top:30px;
+
+}
+.nir-fr-repl
+{
+    background-color: #8b9076;
+    padding: 12px 12px 12px 12px;
+    border-radius: 9px;
+}
+.reply
+{
+    overflow: auto;
+    overflow-scrolling: auto;
+    margin-bottom: 270px;
+}
+.nir-fr-repl article
+{
+    border: 2px whitesmoke solid;
+}
+.nir-fr-put_answ
+{
+    box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+    margin-top: 100px;
+    margin-bottom: 120px;
+    padding: 22px 22px ;
+    border-radius: 9px;
+    height: 300px;
+    width: auto;
+}
+.nir-fr-put_answ textarea
+{
+    height: 220px;
+    width: 520px;
+}
+.dash
+{
+    margin-bottom: 300px;
+}
+/* the following lines are for styling the evar_posts.html */
+.nir-evar {
+        margin-bottom: 450px;
+}
+
+.nir-evar-header,.nir-evar-footer
+{
+    font-size: 18px;
+}
+.nir-evar-header
+{
+    font-style: initial;
+    font-stretch: expanded;
+}
+.nir-evar-footer
+{
+    color:red;
+
+}
+/* styling users.html partial 
+
+ */
+.nir-user-lt header
+{
+    font-size: 17px;
+    font-style: italic;
+    background-color: white;
+    padding-left: 18px;
+}
+.nir-user-lt
+{
+    margin-bottom: 250px;
+}
+.nir-user-lt td
+{
+    font-size: 16px;
+    font-style: italic;
 }

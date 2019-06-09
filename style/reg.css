@@ -37,6 +37,10 @@ a:hover
     width: 99vh !important;
    
 }
+.partial
+{
+    margin-top: 6px;
+}
 input[type="text"],input[type="password"],input[type="email"],.textArea
 {
     width:94vh;
@@ -48,8 +52,7 @@ input[type="text"],input[type="password"],input[type="email"],.textArea
     border-bottom: 1px solid #b6b6b6;
     padding-left: 12px;
     padding-right: 12px;
-}
-.textArea
+}.textArea
 {
     width:94vh;
     height:16vh;
@@ -72,10 +75,7 @@ input[type="file"]
 
 }
 
-.partial
-{
-    margin-top: 6px;
-}
+
 .subRes
 {
     margin-top:16px;
