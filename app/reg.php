@@ -1,10 +1,14 @@
 <?php
-
+/**
+ * Created by PhpStorm.
+ * User:
+ * Date: 2/8/2019
+ * Time: 1:48 AM
+ */
 require "database.php";
 $database=new database();
 $data=array();
 $status=0;
-//maxid() req :done
 function maxid()
 {
     $database=new database();
@@ -12,7 +16,6 @@ function maxid()
     $e=$database->resultset();
     return ++$e[0]->uidm;
 }
-/* connection req:done*/
 $postdata=json_decode(file_get_contents("php://input"));
 if(empty($postdata->address))
     $postdata->address=null;
@@ -37,7 +40,9 @@ catch (PDOException $e)
 {
     $status=0;
 }
-output=array("status" =>$status);
+
+
+
+
+$output=array("status" =>$status);
 echo json_encode($output);
-//final
-?>

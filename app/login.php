@@ -1,3 +1,4 @@
+<?php
 //print_r($_POST);
 $password=$_POST['password'];
 $email=$_POST['email'];
@@ -8,6 +9,7 @@ $ur="root";
 $db="project";
 $ps="";
 $data=array();
+
 //creating the connection
 $conn=new mysqli($ser,$ur,$ps,$db);
 

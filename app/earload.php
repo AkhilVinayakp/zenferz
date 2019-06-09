@@ -34,6 +34,8 @@ if($postdata->fn=="normal") {
     } else
         $like = 0;
 }
+//end
+
 //updating the like operations
 else if($postdata->fn=="like")
 {
@@ -92,6 +94,73 @@ else if ($postdata->fn=="single")
 
 
 }
+else if($postdata->fn=="comment")
+{
+    if($postdata->subfn=="add")
+    {
+        $database->query("insert into comment values (:earid ,:uname ,:comment)");
+        $database->bind(":earid",$postdata->earid);
+        $database->bind(":uname",$postdata->uname);
+        $database->bind(":comment",$postdata->comment);
+        if($database->execute())
+        {
+            $data="successfully inserted";
+        }
+        else
+            $data="somthing went wrong";
+
+    }
+    else if($postdata->subfn=="load")
+    {
+        $database->query("select * from comment where earid=:id");
+        $database->bind(":id",$postdata->earid);
+       $result=$database->resultset();
+       if($result) {
+           foreach ($result as $row) {
+               $data[] = $row;
+           }
+       }
+       else
+           $data=null;
+    }
+
+
+
+}
+else if($postdata->fn=="password")
+{
+    $database->query("update usr_info set password=:pass where uid=:uid");
+    $database->bind(":pass",$postdata->newpass);
+    $database->bind(":uid",$postdata->uid);
+    $result=$database->execute();
+    if($result)
+    {
+        $data="success";
+    }
+    else
+        $data="error";
+}
+else if($postdata->fn=="myarticles")
+{
+    if($postdata->subfn=="load")
+    {
+        $database->query("select EARid,name,pub_date,content,intro from event where type=:type and by_whom=:uid");
+        $database->bind(":type",$postdata->type);
+        $database->bind(":uid",$postdata->uid);
+        $result=$database->resultset();
+        if($result) {
+            foreach ($result as $row) {
+                $data[] = $row;
+            }
+        }
+        else
+            $data=null;
+
+    }
+
+}
+
+
 
 
 $output=array(
