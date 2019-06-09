@@ -309,5 +309,66 @@ usr.controller("singleCtrl",function ($scope,$http,$location,$log) {
                 }
 
             })
+           //controlling the comments
+        /*
+            -----------------------------
+
+
+         */
+
+        function loadcomm()
+        {
+            $http({
+                url:"app/earload.php",
+                method: "POST",
+                headers:
+                    {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                data: {
+                    fn: "comment",
+                    subfn: "load",
+                    earid: earid
+                }
+            }).then(function (response) {
+                $scope.comments=response.data.output;
+                $log.info($scope.comments);
+            })
+        }
+        loadcomm();//calling to load the commenta
+        $scope.comShow=function () {
+                    if($scope.comments==null)
+                        return true;
+                    else
+                        return false;
+        };
+
+
+        $scope.commentit=function () {
+                $http({
+                    url:"app/earload.php",
+                    method: "POST",
+                    headers:
+                        {
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        },
+                    data:{
+                        fn:"comment",
+                        subfn:"add",
+                        earid:earid,
+                        comment:$scope.comment,
+                        uname:sessionStorage.getItem('name')
+                    }
+                }).then(function (response) {
+                    $log.info(response.data);
+                    //console.log(sessionStorage.getItem('uname'));
+                    alert("Successfully added");
+                    loadcomm();
+                    $scope.comment="";
+                },function (reason) {
+                    alert(reason.error);
+                })
+               }
+            }
         };
       
